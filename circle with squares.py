@@ -1,6 +1,15 @@
-import turtle
-import random
-clr=["red","white","blue","cyan","orange","brown","green","yellow"]
+import os
+try:
+    import turtle
+except:
+    os.system('pip -m install turtle')
+
+try:
+    import random
+except:
+    os.system('pip -m install random')
+
+clr = ["red", "white", "blue", "cyan", "orange", "brown", "green", "yellow"]
 turtle.bgcolor('black')
 turtle.width(5)
 turtle.speed(9)
