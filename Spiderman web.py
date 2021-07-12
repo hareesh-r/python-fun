@@ -1,4 +1,10 @@
-import turtle
+try:
+    import turtle
+except:
+    import os
+    os.system('pip -m install trutle')
+    import turtle
+    
 har=turtle.Turtle()
 w=turtle.Screen();w.bgcolor("black")
 har.color("white");har.speed(8)
@@ -17,6 +23,7 @@ for i in range(200):
         h.lt(-k)
         if i%6==0:
                 pass
+
 
 
 
