@@ -1,4 +1,9 @@
-import turtle
+try:
+    import turtle
+except:
+    import os
+    os.system('pip -m install trutle')
+    import turtle    
 
 screen= turtle.Screen()
 
