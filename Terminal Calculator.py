@@ -9,7 +9,7 @@ print("3. MULTIPLY       (3)")
 print("4. DIVISION       (4)")
 print("Enter your choice")
 a=int(input())
-if(a==1)or(a==11):
+if a in {1, 11}:
    print("ADDITION")
    print("enter no 1:")
    b=int(input())
@@ -46,4 +46,4 @@ elif(a==4):
     print("the answer is :",temp)
     input()
 else:
-    print("invalid input")
+   print("invalid input")
