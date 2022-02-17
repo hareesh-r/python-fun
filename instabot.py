@@ -348,9 +348,7 @@ def sendMessage(messageList):
     messageBox = driver.find_element_by_xpath(
         '//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')
 
-    counter = 1
-
-    for i in messageList:
+    for counter, i in enumerate(messageList, start=1):
 
         messageBox.send_keys(i)
 
@@ -362,8 +360,6 @@ def sendMessage(messageList):
         time.sleep(0.5)
 
         print(counter, i, 'sent successfully', sep=" ")
-
-        counter += 1
 
     print('closing tab')
 
@@ -378,13 +374,9 @@ if(decider == "1"):
 
     sendMessage(messageList)
 
-if(decider == "2"):
+if (decider == "2"):
 
-    temp = []
-
-    for i in range(int(noOfTime1)):
-
-        temp.append(messageToSend)
+    temp = [messageToSend for _ in range(int(noOfTime1))]
 
     sendMessage(temp)
 

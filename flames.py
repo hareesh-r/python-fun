@@ -24,14 +24,14 @@ while proceed:
 count=len(l1)+len(l2)
 results = ("Friends","Affection","Marriage","Enemy","Sister")
 
-while len(results) > 1 :
+while len(results) > 1:
     split_index=(count % len(results)) -1
     if split_index >= 0:
         right = results [ split_index +1 :]
         left = results [ : split_index ]
         results = right + left
     else:
-        results = results[ : len(results) -1 ]
+        results = results[:-1]
 print(results)
 input()
 input()
